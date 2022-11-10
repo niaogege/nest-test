@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "name": "Nest DI",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "dev:router"],
+      "runtimeExecutable": "npm",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "name": "Nest",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "start"],
+      "runtimeExecutable": "npm",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ]
+}
