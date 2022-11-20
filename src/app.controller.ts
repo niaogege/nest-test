@@ -1,16 +1,20 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { UserService } from './user/user.service';
 
 @Controller({
   path: '/cpp',
   host: '127.0.0.1',
 })
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly appService: AppService,
+    private readonly userService: UserService,
+  ) {}
 
   @Get('hello')
   getHello(): string {
-    return this.appService.getHello();
+    return this.userService.findAll();
   }
 
   @Get()
