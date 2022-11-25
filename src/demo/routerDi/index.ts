@@ -35,6 +35,7 @@ export const Post = methodDecoratorFactory(REQUEST_METHOD.POST);
 
 function Controller(path?: string): ClassDecorator {
   return (target) => {
+    // 定义路跟径
     Reflect.defineMetadata(METADATA_KEY.PATH, path ?? '', target);
   };
 }

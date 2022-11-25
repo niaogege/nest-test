@@ -1,6 +1,6 @@
 export type ClassContruct<T = any> = new (...args) => T;
 
-type ServiceKey<T = any> = string | ClassContruct<T> | Function;
+type ServiceKey<T = any> = string | ClassContruct<T>;
 
 export class Container {
   public static propertyRegistry: Map<string, string> = new Map();

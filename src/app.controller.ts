@@ -4,7 +4,7 @@ import { UserService } from './user/user.service';
 
 @Controller({
   path: '/cpp',
-  host: '127.0.0.1',
+  // host: '127.0.0.1',
 })
 export class AppController {
   constructor(
@@ -17,8 +17,12 @@ export class AppController {
     return this.userService.findAll();
   }
 
-  @Get()
+  @Get('html')
   getAppHtml() {
     return this.appService.getHtml();
+  }
+  @Get()
+  getHellos() {
+    return 'Hello World!';
   }
 }

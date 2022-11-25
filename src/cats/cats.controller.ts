@@ -1,19 +1,40 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Req,
+  Param,
+  Query,
+  DefaultValuePipe,
+  ParseUUIDPipe,
+  UseGuards,
+} from '@nestjs/common';
 import { CatsService } from './cats.service';
 import { Cat } from './interaces/cat.interface';
 import { CreateCtatsDto } from './dto/create-cat.dto';
 import { UserService } from '../user/user.service';
+import CppParseIntPipe from '../common/pipe/parse-int.pipe';
+import AuthGuard from 'src/common/guard/auth.guard';
+import { Roles } from '../common/decorator/role.decorator';
+// import JoiValidationPipe, {
+//   catSchema,
+// } from 'src/common/pipe/joiValidation.pipe';
 
 @Controller('cats')
+@UseGuards(AuthGuard)
 export class CatsController {
   constructor(
     private catsService: CatsService,
     private readonly userService: UserService,
   ) {}
-  @Post()
-  // @HttpCode(204)
+  @Post('create')
+  @Roles('admins')
   async create(@Body() createCatDto: CreateCtatsDto) {
+    console.log('createCatDto::', createCatDto);
+    console.log('name::', createCatDto.age);
     this.catsService.create(createCatDto);
+    return this.catsService.cats;
   }
 
   // @Get('ab*cd')
@@ -28,14 +49,25 @@ export class CatsController {
   }
 
   @Get('test')
-  find(): string {
-    console.log(this.catsService.connection);
-    const { name } = this.catsService.connection;
-    return 'THIS is Cats test::' + name;
+  find(@Req() request: any): string {
+    const { name: qName, age } = request.query;
+    return 'THIS is Cats test::' + qName + '\nage::' + age;
   }
 
   @Get('user')
   getHello() {
     return this.userService.findAll();
+  }
+
+  @Get('query')
+  async findOne(
+    @Query('id', new DefaultValuePipe(0), CppParseIntPipe) id: number,
+  ) {
+    return this.catsService.findOne(id);
+  }
+
+  @Get('uuid/:uuid')
+  async findUUid(@Param('uuid', new ParseUUIDPipe()) uuid: string) {
+    return uuid;
   }
 }

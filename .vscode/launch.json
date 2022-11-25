@@ -10,9 +10,9 @@
       "type": "node"
     },
     {
-      "name": "Nest",
+      "name": "Nest Test",
       "request": "launch",
-      "runtimeArgs": ["run-script", "start"],
+      "runtimeArgs": ["run-script", "start:dev"],
       "runtimeExecutable": "npm",
       "console": "integratedTerminal",
       "skipFiles": ["<node_internals>/**"],

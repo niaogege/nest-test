@@ -4,7 +4,7 @@ export class CreateCtatsDto {
   public breed: string;
   constructor() {
     this.name = 'cpp';
-    this.age = 31;
+    this.age = 1;
     this.breed = 'breedbreed';
   }
 }
