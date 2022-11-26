@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/niaogege/nest-test/compare/v1.2.0...v1.3.0) (2022-11-26)
+
+
+### Features
+
+* change dep ([295ae2c](https://github.com/niaogege/nest-test/commit/295ae2c70784f2565b8d906f1c35693915eda6d4))
+* change readme ([327322d](https://github.com/niaogege/nest-test/commit/327322dcd251246341feee358b880ae62a59dd67))
+
 # [1.2.0](https://github.com/niaogege/nest-test/compare/v1.1.0...v1.2.0) (2022-11-26)
 
 
