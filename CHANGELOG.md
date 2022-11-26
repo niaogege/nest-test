@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/niaogege/nest-test/compare/v1.0.0...v1.1.0) (2022-11-26)
+
+
+### Features
+
+* change dependabot.yml ([f076205](https://github.com/niaogege/nest-test/commit/f0762055e2d720c4cf3589cb6b4e6aa2118565ff))
+
 # 1.0.0 (2022-11-26)
 
 
