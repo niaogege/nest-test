@@ -1,10 +1,16 @@
 {
   "name": "cpp-nest-test",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "nodejs nestjs",
+  "author": "@chendap",
   "private": true,
   "license": "UNLICENSED",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "homepage": "https://github.com/niaogege/nest-test",
+  "repository": "https://github.com/niaogege/nest-test",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",

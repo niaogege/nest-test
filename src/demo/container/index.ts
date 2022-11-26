@@ -1,6 +1,7 @@
 export type ClassContruct<T = any> = new (...args) => T;
 
-type ServiceKey<T = any> = string | ClassContruct<T>;
+// eslint-disable-next-line @typescript-eslint/ban-types
+type ServiceKey<T = any> = string | ClassContruct<T> | Function;
 
 export class Container {
   public static propertyRegistry: Map<string, string> = new Map();

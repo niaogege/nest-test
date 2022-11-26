@@ -46,4 +46,19 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## question
 
-- service 端改动之后，没有实时更新
+- service 端改动之后，没有实时更新, 已解决 **pnpm run start:dev**
+
+## API 文档
+
+### user
+
+```js
+http://localhost:3000/api/v1/user
+```
+
+### cats
+
+```js
+http://localhost:3000/api/v1/cats/create
+http://localhost:3000/api/v1/cats/query?id=890
+```
