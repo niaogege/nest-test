@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/niaogege/nest-test/compare/v1.1.0...v1.2.0) (2022-11-26)
+
+
+### Features
+
+* add github page ([c47786e](https://github.com/niaogege/nest-test/commit/c47786e033107fe54c1d46cc76454d66205cdc9a))
+
 # [1.1.0](https://github.com/niaogege/nest-test/compare/v1.0.0...v1.1.0) (2022-11-26)
 
 
