@@ -1,8 +1,9 @@
 ## Question
 
-- CI/CD 自动测试/自动发布，脚本编写
+- CI/CD 自动测试/打包/自动发布，脚本编写
 - 提交到 **main** 分支且 commit 前缀为 feat、fix、perf 才会发布,This is why
-- 如何把 **Nest** 项目部署到 github page
+- 如何把 **Nest** 项目部署到 github 中的 action?
+- Nest 打完包都是没有带任何依赖的，发布到线上还需要按照依赖，然后用 pm2 跑下主入口
 
 ## Description
 
@@ -39,10 +40,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
