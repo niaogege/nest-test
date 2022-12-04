@@ -15,6 +15,7 @@ export default class LoggingInterceptor implements NestInterceptor {
   ): Observable<any> | Promise<Observable<any>> {
     console.log('LOGGER before...');
     const [req] = context.getArgs();
+    console.log(req);
     console.log(`CUR URL: ${req.url}`);
     const now = Date.now();
     return next
