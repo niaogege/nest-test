@@ -45,7 +45,8 @@ jobs:
             pnpm i
             echo $TARGET_DIR
             pnpm run build
+            ls
             pm2 -v
-            cd /dist
+            cd dist
             pm2 reload main.js -i max
             echo $LASTSSH
