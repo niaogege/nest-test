@@ -1,12 +1,13 @@
 name: CPP/CD
 
 on:
+  # release分支再去发布
   push:
     branches:
-      - main
+      - release
   pull_request:
     branches:
-      - main
+      - release
 jobs:
   release:
     runs-on: ubuntu-latest

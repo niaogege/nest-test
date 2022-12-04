@@ -3,10 +3,10 @@ name: CPP/CI
 on:
   push:
     branches:
-      - '**'
+      - 'test'
   pull_request:
     branches:
-      - '**'
+      - 'test'
 jobs:
   nest-linter:
     runs-on: ubuntu-latest

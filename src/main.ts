@@ -29,6 +29,6 @@ async function bootstrap() {
   // 异常响应拦截器
   app.useGlobalInterceptors(new ErrorInterceptor());
 
-  await app.listen(80);
+  await app.listen(3000);
 }
 bootstrap();

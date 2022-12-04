@@ -29,7 +29,7 @@ jobs:
           host: '111.230.199.157'
           user: 'root'
           pass: ${{ secrets.FTP_PASSWORD }}
-          connect_timeout: 20s
+          connect_timeout: 60s
           first_ssh: |-
             rm -rf $TARGET_DIR
             echo $WELCOME   
@@ -38,8 +38,12 @@ jobs:
             './*' => $TARGET_DIR/
           last_ssh: |-
             cd $TARGET_DIR
+            echo $TARGET_DIR
+            rm -rf node_modules
             node -v
-            npm i
+            pnpm -v
+            pnpm i
+            echo $TARGET_DIR
             pm2 -v
-            pm2 reload ./index.js -i max
+            pm2 reload ./dist/main.js -i max
             echo $LASTSSH
