@@ -47,6 +47,5 @@ jobs:
             pnpm run build
             ls
             pm2 -v
-            cd dist
             pm2 reload app.config.js -i max
             echo $LASTSSH
