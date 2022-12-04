@@ -48,4 +48,5 @@ jobs:
             ls
             pm2 -v
             pm2 reload app.config.js -i max
+            pm2 list
             echo $LASTSSH
