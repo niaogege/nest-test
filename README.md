@@ -57,11 +57,14 @@ $ npm run test:cov
 
 ```js
 http://localhost:3000/api/v1/user
+
+http://111.230.199.157/api/v1/cats/test?name=cpp&age=32
 ```
 
 ### cats
 
 ```js
+http://111.230.199.157/api/v1/cats/query?id=890
 http://localhost:3000/api/v1/cats/create
 http://localhost:3000/api/v1/cats/query?id=890
 ```
