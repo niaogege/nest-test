@@ -1,5 +1,7 @@
 ## Question
 
+[![wakatime](https://wakatime.com/badge/github/niaogege/nest-test.svg)](https://wakatime.com/badge/github/niaogege/nest-test)
+
 - CI/CD 自动测试/打包/自动发布，脚本编写
 - 提交到 **main** 分支且 commit 前缀为 feat、fix、perf 才会发布,This is why
 - 如何把 **Nest** 项目部署到 github 中的 action?
