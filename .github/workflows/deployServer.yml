@@ -40,8 +40,6 @@ jobs:
             cd $TARGET_DIR
             echo $TARGET_DIR
             rm -rf node_modules
-            node -v
-            pnpm -v
             pnpm i
             echo $TARGET_DIR
             pnpm run build
