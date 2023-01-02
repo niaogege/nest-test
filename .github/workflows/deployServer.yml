@@ -40,6 +40,7 @@ jobs:
             cd $TARGET_DIR
             echo $TARGET_DIR
             rm -rf node_modules
+            pnpm i
             echo $TARGET_DIR
             pnpm run build
             pm2 reload app.config.js -i max
