@@ -6,7 +6,7 @@ module.exports = {
   apps: [
     {
       name: 'NestJs Cpp Test',
-      script: './dist/main.js',
+      script: path.resolve('./dist/main.js'),
       // 启动应用的模式, 有两种：cluster和fork，默认是fork
       exec_mode: 'cluster',
       // 创建应用实例的数量
