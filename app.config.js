@@ -17,9 +17,9 @@ module.exports = {
       // 由于把日志目录放到了项目路径下，一定要将其忽略，否则应用启动产生日志，pm2 监听到变化就会重启，重启又产生日志，就会进入死循环
       // ignore_watch: ['node_modules', 'logs'],
       // // 错误日志存放路径
-      err_file: path.resolve(__dirname, 'logs/error.log'),
-      // 打印日志存放路径
-      out_file: path.resolve(__dirname, 'logs/out.log'),
+      output: '/root/.pm2/logs/out.log',
+      error: '/root/.pm2/logs/error.log',
+      merge_logs: true,
       // 设置日志文件中每条日志前面的日期格式
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
     },
