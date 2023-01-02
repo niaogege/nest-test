@@ -31,8 +31,6 @@ export class CatsController {
   @Post('create')
   @Roles('admins')
   async create(@Body() createCatDto: CreateCtatsDto) {
-    console.log('createCatDto::', createCatDto);
-    console.log('name::', createCatDto.age);
     this.catsService.create(createCatDto);
     return this.catsService.cats;
   }
@@ -69,5 +67,9 @@ export class CatsController {
   @Get('uuid/:uuid')
   async findUUid(@Param('uuid', new ParseUUIDPipe()) uuid: string) {
     return uuid;
+  }
+  @Get('image')
+  async getImage() {
+    return 'https://c2.im5i.com/2023/01/02/YwkFR.png';
   }
 }
