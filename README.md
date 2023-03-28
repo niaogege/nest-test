@@ -1,6 +1,6 @@
 ## Question
 
-[![wakatime](https://wakatime.com/badge/github/niaogege/nest-test.svg)](https://wakatime.com/badge/github/niaogege/nest-test)
+[![wakatime](https://wakatime.com/badge/user/e2117d10-c306-4cda-b480-393acc65ee4d/project/d8319581-bf7d-42f3-9fb2-0ea5b32977c0.svg)](https://wakatime.com/badge/user/e2117d10-c306-4cda-b480-393acc65ee4d/project/d8319581-bf7d-42f3-9fb2-0ea5b32977c0)
 
 - CI/CD 自动测试/打包/自动发布，脚本编写如下：
 - 提交到 **main** 分支或者合并到主分支的时候触发 CI 脚本
